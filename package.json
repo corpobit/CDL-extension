@@ -4,24 +4,52 @@
   "description": "Syntax highlighting for Compact Data Language (CDL)",
   "version": "0.1.1",
   "publisher": "corpobit",
+  "main": "./out/extension.js",
   "engines": {
     "vscode": "^1.60.0"
   },
+  "activationEvents": [
+    "onLanguage:cdl"
+  ],
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Formatters"
   ],
   "contributes": {
-    "languages": [{
-      "id": "cdl",
-      "aliases": ["Compact Data Language", "cdl"],
-      "extensions": [".cdl"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "cdl",
-      "scopeName": "source.cdl",
-      "path": "./syntaxes/cdl.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "cdl",
+        "aliases": [
+          "Compact Data Language",
+          "cdl"
+        ],
+        "extensions": [
+          ".cdl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cdl",
+        "scopeName": "source.cdl",
+        "path": "./syntaxes/cdl.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "cdl.format",
+        "title": "Format CDL Document"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cdl.format",
+        "key": "shift+alt+f",
+        "mac": "shift+option+f",
+        "when": "editorLangId == cdl"
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -42,5 +70,9 @@
   "bugs": {
     "url": "https://github.com/corpobit/CDL/issues"
   },
-  "homepage": "https://github.com/corpobit/CDL/blob/main/cdl-vscode/README.md"
-} 
+  "homepage": "https://github.com/corpobit/CDL/blob/main/cdl-vscode/README.md",
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "typescript": "^5.8.3"
+  }
+}
