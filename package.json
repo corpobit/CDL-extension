@@ -1,0 +1,46 @@
+{
+  "name": "cdl-vscode",
+  "displayName": "Compact Data Language (CDL) Syntax",
+  "description": "Syntax highlighting for Compact Data Language (CDL)",
+  "version": "0.1.0",
+  "publisher": "corpobit",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cdl",
+      "aliases": ["Compact Data Language", "cdl"],
+      "extensions": [".cdl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cdl",
+      "scopeName": "source.cdl",
+      "path": "./syntaxes/cdl.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corpobit/CDL"
+  },
+  "keywords": [
+    "cdl",
+    "compact-data-language",
+    "syntax-highlighting"
+  ],
+  "author": "Corpobit",
+  "license": "MIT",
+  "icon": "images/CDL-logo.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "bugs": {
+    "url": "https://github.com/corpobit/CDL/issues"
+  },
+  "homepage": "https://github.com/corpobit/CDL/blob/main/cdl-vscode/README.md"
+} 

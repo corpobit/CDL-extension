@@ -1,0 +1,106 @@
+{
+  "name": "Compact Data Language",
+  "scopeName": "source.cdl",
+  "fileTypes": ["cdl"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#delimiters"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.cdl",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.cdl",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cdl",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.cdl",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cdl",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.cdl",
+          "match": "\\b[0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.float.cdl",
+          "match": "\\b[0-9]+\\.[0-9]+\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.cdl",
+          "match": "\\b(true|false|null)\\b"
+        }
+      ]
+    },
+    "delimiters": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.array.begin.cdl",
+          "match": "\\["
+        },
+        {
+          "name": "punctuation.definition.array.end.cdl",
+          "match": "\\]"
+        },
+        {
+          "name": "punctuation.definition.block.begin.cdl",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.definition.block.end.cdl",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.separator.key-value.cdl",
+          "match": ":"
+        },
+        {
+          "name": "punctuation.separator.array.cdl",
+          "match": ","
+        }
+      ]
+    }
+  }
+} 
