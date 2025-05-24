@@ -2,7 +2,7 @@
   "name": "cdl-vscode",
   "displayName": "Compact Data Language (CDL) Syntax",
   "description": "Syntax highlighting for Compact Data Language (CDL)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "corpobit",
   "engines": {
     "vscode": "^1.60.0"
